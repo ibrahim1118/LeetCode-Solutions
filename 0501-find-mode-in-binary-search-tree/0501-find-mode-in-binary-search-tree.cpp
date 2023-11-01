@@ -12,13 +12,11 @@
 class Solution {
 public:
     map<int,int>mp; 
+    int ma =0; 
     vector<int> findMode(TreeNode* root) {
          if (root==NULL)
              return {}; 
-        solve(root); 
-        int ma =0 ;
-        for (auto i : mp)
-            ma = max(i.second , ma); 
+        solve(root);
         vector<int>ans; 
         for (auto i : mp)
         {
@@ -29,7 +27,8 @@ public:
     }
     void solve(TreeNode* root)
     {
-        mp[root->val]++; 
+        mp[root->val]++;
+        ma = max(ma , mp[root->val]); 
         if (root->left!=NULL)
             solve(root->left); 
         if (root->right!=NULL)
