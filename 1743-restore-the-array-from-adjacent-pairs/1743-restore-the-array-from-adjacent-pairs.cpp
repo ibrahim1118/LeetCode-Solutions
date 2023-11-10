@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> restoreArray(vector<vector<int>>& a) {
         int first =0;
-        map<int,vector<int>> adj; 
+        unordered_map<int,vector<int>> adj; 
         for (auto i : a)
         { adj[i[0]].push_back(i[1]); 
           adj[i[1]].push_back(i[0]); 
@@ -17,7 +17,7 @@ public:
         }
         queue<int>q ; 
         q.push(first);
-        map<int,int>vis; 
+        unordered_map<int,int>vis; 
         vector<int>ans; 
         while(!q.empty())
         {
