@@ -12,12 +12,6 @@ public:
             }
         }
          sort(ch.begin(), ch.end()); 
-        for (auto i: ind)
-            cout<<i<<" "; 
-        cout<<endl; 
-        for (auto i : ch)
-            cout<<i<<" "; 
-        cout<<endl;
         for (int i=0;i<ind.size();i++)
         {
             s[ind[i]] = ch[i]; 
