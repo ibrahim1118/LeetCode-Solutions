@@ -7,7 +7,7 @@ public:
         for (int i=0;i<n;i++)
         {
     
-            for (auto j : garbage[i])
+            for (char j : garbage[i])
             {
                 if (j=='P')
                    lp=i; 
@@ -21,9 +21,6 @@ public:
         }
         for (int i=1;i<travel.size();i++)
                travel[i]+=travel[i-1]; 
-       
-
-
         if (lp>0)
         t+=travel[lp-1]; 
         if (lm>0)
