@@ -6,7 +6,7 @@ public:
       dp[0] =0; 
      for (int i=1;i<dp.size();i++)
      {
-         for (auto j : coins)
+         for (int j : coins)
          {
              if (i-j>=0)
                  dp[i] = min(dp[i] , dp[i-j]+1); 
