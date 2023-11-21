@@ -1,7 +1,7 @@
 class Solution {
 public:
     int countNicePairs(vector<int>& nums) {
-        map<int,long long>mp;
+        unordered_map<int,long long>mp;
         int mod =1e9+7; 
         for (int i : nums)
         {
