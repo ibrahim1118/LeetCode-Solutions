@@ -5,13 +5,13 @@ public:
         int mod =1e9+7; 
         for (int i : nums)
         {
-            //cout<<i<<" "<<rev(i)<<" "<<i-rev(i)<<endl; 
+            
             mp[i-rev(i)]++; 
         }
         int ans =0;
         for (auto i : mp)
         {
-            //cout<<i.first<<" "<<i.second<<endl; 
+            
             ans+=(((i.second%mod)*((i.second-1)%mod)/2)%mod);
             ans%=mod; 
                 
