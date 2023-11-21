@@ -17,7 +17,7 @@ public:
                 ans-=mod; 
                 
         }
-        return (int)ans; 
+        return ans; 
     }
     int rev(int a)
     {
