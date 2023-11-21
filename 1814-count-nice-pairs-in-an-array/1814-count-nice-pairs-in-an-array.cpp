@@ -11,9 +11,10 @@ public:
         int ans =0;
         for (auto i : mp)
         {
-            
+
             ans+=(((i.second%mod)*((i.second-1)%mod)/2)%mod);
-            ans%=mod; 
+            if (ans>=mod)
+                ans-=mod; 
                 
         }
         return (int)ans; 
