@@ -8,7 +8,7 @@ public:
             //cout<<i<<" "<<rev(i)<<" "<<i-rev(i)<<endl; 
             mp[i-rev(i)]++; 
         }
-        long long ans =0;
+        int ans =0;
         for (auto i : mp)
         {
             //cout<<i.first<<" "<<i.second<<endl; 
