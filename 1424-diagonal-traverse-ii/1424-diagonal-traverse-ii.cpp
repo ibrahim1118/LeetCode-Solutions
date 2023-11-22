@@ -3,17 +3,18 @@ public:
     vector<int> findDiagonalOrder(vector<vector<int>>& nums) {
         vector<int>ans; 
         map<int,vector<int>>v; 
+        int mx =0; 
         for (int i=0;i<nums.size();i++)
         {
             for (int j=0;j<nums[i].size();j++)
-              v[i+j].push_back(nums[i][j]);     
+              v[i+j].push_back(nums[i][j]) , mx = max(mx , i+j);     
             
         }
-        for (auto i : v)
+        for (int i=0;i<=mx;i++)
         {
-            for (int j =i.second.size()-1;j>=0;j--)
+            for (int j =v[i].size()-1;j>=0;j--)
             {
-                ans.push_back(i.second[j]); 
+                ans.push_back(v[i][j]); 
             }
         }
         return ans; 
