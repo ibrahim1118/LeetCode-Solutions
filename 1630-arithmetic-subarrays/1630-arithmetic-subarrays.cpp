@@ -4,19 +4,23 @@ public:
         vector<bool> ans; 
         for (int i=0;i<l.size();i++)
         {
-            unordered_set<int>st;
+           ;
             vector<int>a ; 
             for (int j = l[i] ;j<=r[i];j++)
             {  
                 a.push_back(nums[j]); 
                  
             }
-            sort(a.begin() , a.end()); 
-            for (int j = 0 ;j<a.size()-1;j++)
+            sort(a.begin() , a.end());
+            int d = a[0]-a[1];
+            int b =0;
+            for (int j = 1 ;j<a.size()-1;j++)
             {  
-               st.insert(a[j]-a[j+1]); 
+               if (d!=a[j]-a[j+1])
+               { b++;
+                break;}
             }
-            ans.push_back(st.size()<=1); 
+            ans.push_back(b==0); 
         }
         return ans; 
     }
