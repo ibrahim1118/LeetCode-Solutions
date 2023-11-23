@@ -4,7 +4,7 @@ public:
         vector<bool> ans; 
         for (int i=0;i<l.size();i++)
         {
-            set<int>st;
+            unordered_set<int>st;
             vector<int>a ; 
             for (int j = l[i] ;j<=r[i];j++)
             {  
