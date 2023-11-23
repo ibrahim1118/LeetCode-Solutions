@@ -16,10 +16,6 @@ public:
             {  
                st.insert(a[j]-a[j+1]); 
             }
-            cout<<st.size()<<endl; 
-            for (auto k : st)
-                cout<<k<<" "; 
-            cout<<endl;
             ans.push_back(st.size()<=1); 
         }
         return ans; 
