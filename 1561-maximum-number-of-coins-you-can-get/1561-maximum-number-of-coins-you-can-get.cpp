@@ -3,15 +3,9 @@ public:
     int maxCoins(vector<int>& piles) {
        priority_queue<int>pq; 
        int ans =0 , n =piles.size()/3; 
-       for (int i : piles)
-               pq.push(i);
-        while(pq.size()>n)
-        {
-            pq.pop();
-            ans+=pq.top(); 
-            pq.pop(); 
-        }
-        return ans; 
-        
+       sort(piles.begin(),piles.end()); 
+       for (int i=n;i<piles.size();i+=2)
+        ans+=piles[i];
+        return ans;
     }
 };
