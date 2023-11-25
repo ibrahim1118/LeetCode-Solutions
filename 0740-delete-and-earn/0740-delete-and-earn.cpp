@@ -8,19 +8,12 @@ public:
         dp[1] = fr[1]; 
         for (int i=2;i<dp.size();i++)
         {
-            if (fr[i])
-            {
+            
                 dp[i] = max(dp[i-1] , dp[i-2]+(fr[i]*i)); 
-            }
-            else 
-                dp[i] = dp[i-1]; 
+     
     
         }
-        int ans =0; 
-        for (int i : dp)
-        {
-            ans = max(ans ,i); 
-        }
-        return ans; 
+        
+        return dp[dp.size()-1]; 
     }
 };
