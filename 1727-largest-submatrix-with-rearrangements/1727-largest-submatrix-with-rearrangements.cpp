@@ -13,12 +13,7 @@ public:
             
             for(int i=0; i<n;i++) ans = max(ans, height[i] * (n-i));
         }
-        for (auto i : ma)
-        {
-          for (auto j : i)
-              cout<<j<<" "; 
-            cout<<endl; 
-         }
+        
         return ans;
     }
 };
