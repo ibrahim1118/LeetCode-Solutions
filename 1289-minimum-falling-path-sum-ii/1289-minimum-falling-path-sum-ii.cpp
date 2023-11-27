@@ -15,7 +15,7 @@ public:
            }
        }
        int ans = INT_MAX; 
-       for (auto i : grid[grid.size()-1])
+       for (int i : grid[grid.size()-1])
            ans = min(ans , i); 
         return ans; 
     }
