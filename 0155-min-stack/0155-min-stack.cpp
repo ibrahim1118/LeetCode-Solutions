@@ -1,16 +1,26 @@
 class MinStack {
 public:
-    stack<int>st; 
+    stack<int>st;
+    set<int>s; 
+    unordered_map<int,int>mp; 
     MinStack() {
         
     }
     
     void push(int val) {
           st.push(val);
+          s.insert(val);
+          mp[val]++; 
     }
     
     void pop() {
-        st.pop(); 
+        int a =st.top();
+        st.pop();
+        mp[a]--; 
+        if (mp[a]==0)
+            s.erase(a); 
+        
+        
     }
     
     int top() {
@@ -18,21 +28,9 @@ public:
     }
     
     int getMin() {
-        int ma = INT_MAX; 
-        stack<int>s; 
-        while(!st.empty())
-        {
-            s.push(st.top()); 
-            ma = min(st.top() ,ma); 
-            st.pop(); 
-        }
-         while(!s.empty())
-        {
-            st.push(s.top()); 
-             
-            s.pop(); 
-        }
-        return ma; 
+       for (auto i : s)
+           return i ; 
+       return 0; 
     }
 };
 
