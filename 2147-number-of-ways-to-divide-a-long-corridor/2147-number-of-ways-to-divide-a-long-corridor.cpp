@@ -9,8 +9,7 @@ public:
         }
         if (s%2||s==0)
             return 0; 
-        if (s==2)
-            return 1; 
+       
         vector<int>v; 
         int a =0 ; 
         s=0; 
