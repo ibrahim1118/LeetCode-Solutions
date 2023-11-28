@@ -9,11 +9,10 @@ public:
         }
         if (s%2||s==0)
             return 0; 
-       
         vector<int>v; 
         int a =0 ; 
         s=0; 
-        for (auto i : c)
+        for (char i : c)
         {
             if (i=='S')
             {
@@ -34,7 +33,7 @@ public:
         }
         long long ans =1 ; 
         int mod = 1e9+7; 
-        for (auto i : v)
+        for (int i : v)
         {
             ans = ((ans%mod)*((i+1)%mod))%mod; 
             ans%=mod ; 
