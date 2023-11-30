@@ -1,17 +1,17 @@
 class Solution {
 public:
     int longestPalindrome(string s) {
-       map<char,int>mp; 
+       vector<int>mp(100); 
         for (auto i : s)
-              mp[i]++;
+              mp[i-'A']++;
         int mx =0; 
         int ans =0; 
         for (auto i : mp)
         {
-            if (i.second%2)
-            { ans+=i.second-1 ; mx++;} 
+            if (i%2)
+            { ans+=i-1 ; mx++;} 
             else 
-                ans+=i.second; 
+                ans+=i; 
         }
         if (mx)
             ans++;
