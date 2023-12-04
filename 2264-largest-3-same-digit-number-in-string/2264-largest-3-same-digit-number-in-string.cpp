@@ -4,7 +4,7 @@ public:
         string ans =""; 
         for (int i = 1;i<num.size()-1;i++)
         {
-            cout<<i<<" "; 
+            //cout<<i<<" "; 
             if (num[i]==num[i-1]&&num[i]==num[i+1])
             {
                 string s = ""; 
