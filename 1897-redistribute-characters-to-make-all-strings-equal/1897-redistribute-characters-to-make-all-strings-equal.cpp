@@ -1,15 +1,15 @@
 class Solution {
 public:
     bool makeEqual(vector<string>& words) {
-        map<char,int>mp; 
+       vector<int>v(27);  
         for (auto i : words)
         {
             for (auto j :i )
-                mp[j]++;
+                v[j-'a']++;
         }
-        for (auto i : mp)
+        for (auto i : v)
         {
-            if (i.second%words.size())
+            if (i%words.size())
                 return false; 
         }
         return true; 
