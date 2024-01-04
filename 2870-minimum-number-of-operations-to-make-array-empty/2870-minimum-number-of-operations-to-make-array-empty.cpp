@@ -5,7 +5,7 @@ public:
         for (auto i : nums)
             freq[i]++; 
         int ans =0; 
-        for (auto &i : freq)
+        for (int &i : freq)
         {
            if (i==1)
               return -1; 
