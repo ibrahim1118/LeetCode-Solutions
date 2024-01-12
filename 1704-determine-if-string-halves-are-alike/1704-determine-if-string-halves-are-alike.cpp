@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool halvesAreAlike(string s) {
-        unordered_set<char>st ; 
+        set<char>st ; 
         st.insert('a'); 
         st.insert('e'); 
         st.insert('i'); 
