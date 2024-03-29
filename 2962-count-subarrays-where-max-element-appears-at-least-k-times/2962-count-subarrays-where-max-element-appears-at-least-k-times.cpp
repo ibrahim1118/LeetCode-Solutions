@@ -4,7 +4,7 @@ public:
        int mx =0; 
        for (auto i : nums)
            mx = max(i , mx); 
-        map<long long ,long long>mp;
+       unordered_map<long long ,long long>mp;
         int i=0 , j=0; 
         long long ans =0; 
         while(j<nums.size())
