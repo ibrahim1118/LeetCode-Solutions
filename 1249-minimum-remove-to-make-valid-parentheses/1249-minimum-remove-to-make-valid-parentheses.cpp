@@ -20,9 +20,7 @@ public:
             s[st.top()] = '.'; 
             st.pop();
         }
-        for (auto i : s)
-             if (i!='.')
-                 ans+=i; 
-        return ans; 
+         s.erase(remove(s.begin(), s.end(), '.'), s.end());
+        return s;
     }
 };
