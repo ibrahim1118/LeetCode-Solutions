@@ -15,11 +15,10 @@ public:
             mx = max(mx , height[i]); 
         }
         reverse(mxRight.begin() , mxRight.end()); 
-        cout<<mxLeft.size();
+      
         int ans=0; 
         for (int i=0;i<height.size();i++)
         {
-            cout<<mxLeft[i]<<" "<<height[i]<<" "<<mxRight[i]<<endl; 
             ans+=max(0 , min(mxLeft[i] , mxRight[i])-height[i]); 
         }
         return ans; 
