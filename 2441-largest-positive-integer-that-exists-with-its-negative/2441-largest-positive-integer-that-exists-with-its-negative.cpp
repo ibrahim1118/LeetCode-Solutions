@@ -1,7 +1,7 @@
 class Solution {
 public:
     int findMaxK(vector<int>& nums) {
-        map<int,int>mp; 
+        unordered_map<int,int>mp; 
         sort(nums.begin() , nums.end()); 
         int ans = -1;
         for (auto i: nums)
