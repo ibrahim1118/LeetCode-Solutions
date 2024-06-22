@@ -9,7 +9,7 @@ public:
         for (auto i : v)
             cout<<i<<' '; 
         
-        map<int,int>mp ;
+        unordered_map<int,int>mp ;
         mp[0] =  1 ; 
         int ans =0;
         for (auto i :v )
