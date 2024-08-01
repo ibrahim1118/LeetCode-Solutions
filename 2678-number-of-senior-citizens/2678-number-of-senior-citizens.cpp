@@ -7,7 +7,7 @@ public:
            string x =""; 
            x+=i[11];
                x+=i[12]; 
-           cout<<x<<" "; 
+           
           if (x>"60")
               ans++; 
        }
