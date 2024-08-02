@@ -20,21 +20,12 @@ public:
             return 0; 
         for (int l = 0 , r=o-1;r<n;l++ ,r++)
         {
-            int x ;
-            if (l>0)
-            x=  one[r] -one[l-1];
-            else 
-            x= one[r]; 
-    
+            int x = l>0?one[r] -one[l-1]:one[r] ;
             ans = min(ans  , o-x); 
         }
         for (int l = 0 , r=z-1;r<n;l++ ,r++)
         {
-            int x ;
-            if (l>0)
-            x=  zero[r] -zero[l-1];
-            else 
-            x= zero[r];  
+            int x = l>0?zero[r] -zero[l-1]: zero[r];   
             ans = min(ans  , z-x); 
         }
         if (ans==1e5)
