@@ -6,9 +6,6 @@ public:
           v[i-'a']++; 
         sort(v.rbegin() , v.rend()); 
         int ans =0; 
-        for (auto i: v)
-            cout<<i<<" "; 
-        cout<<endl; 
         for (int i =0;i<26;i++)
         {
             if (i<=7)
