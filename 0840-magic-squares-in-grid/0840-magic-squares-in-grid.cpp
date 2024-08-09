@@ -24,12 +24,8 @@ public:
                           st.insert(grid[r][c]); 
                   }
               }
-              for (auto i: st1)
-                  cout<<i<<" "; 
-              cout<<endl ; 
-              for (auto i: st)
-                  cout<<i<<" ";
-              cout<<endl; 
+            
+             
               if (st1.size()==1&&st.size()==9)
                   ans++; 
           }
