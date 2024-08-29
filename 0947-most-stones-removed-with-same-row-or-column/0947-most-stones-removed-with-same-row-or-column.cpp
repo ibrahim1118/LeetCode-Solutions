@@ -1,16 +1,14 @@
 class Solution {
 public:
     vector<vector<int>>adj;
-    int ans =0; 
     vector<int>vis; 
-    void dfs(int node , int le)
+    void dfs(int node)
     {
-        ans = max(ans , le); 
         vis[node] = 1 ; 
         for (auto i : adj[node])
         {
             if (!vis[i])
-                dfs(i , le+1); 
+                dfs(i ); 
         }
     }
     int removeStones(vector<vector<int>>& stones) {
@@ -28,18 +26,12 @@ public:
                 }
             }
         }
-        int nu =0 ; 
-        for (auto i : adj)
-        {
-            for (auto j : i)
-                cout<<j<<" "; 
-            cout<<endl;
-        }
+        int nu =0;
         for (int i =0;i<n;i++)
         {
             if (!vis[i]){
                nu++; 
-                dfs(i , 1);
+                dfs(i);
             } 
         }
         return n -nu; 
