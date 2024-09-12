@@ -1,7 +1,7 @@
 class Solution {
 public:
     int countConsistentStrings(string allowed, vector<string>& words) {
-     vector<int>v(26);
+    int v[26]={0};
      for (auto i: allowed)
      {
           v[i-'a']++;  
