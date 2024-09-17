@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<string> uncommonFromSentences(string s1, string s2) {
-     map<string,int>mp ; 
+     unordered_map<string,int>mp ; 
      string s ="" ; 
         for (auto i: s1)
         {
