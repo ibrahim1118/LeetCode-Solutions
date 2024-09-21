@@ -1,11 +1,11 @@
 class Solution {
 public:
     vector<int> lexicalOrder(int n) {
-        vector<string>s; 
+        vector<string>s(n); 
         for (int i=1;i<=n;i++)
         {
             string a = to_string(i); 
-            s.push_back(a); 
+            s[i-1]=a; 
         }
         sort(s.begin() , s.end()); 
         vector<int>ans ; 
