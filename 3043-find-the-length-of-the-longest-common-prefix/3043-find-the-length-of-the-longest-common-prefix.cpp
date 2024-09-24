@@ -13,8 +13,7 @@ public:
            }
                
        }
-        for (auto i : mp)
-            cout<<i.first<<' '<<i.second; 
+        
        int ans =0; 
       for (auto i : arr2)
        {
