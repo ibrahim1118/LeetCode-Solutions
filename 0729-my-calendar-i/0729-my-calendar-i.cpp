@@ -1,6 +1,6 @@
 class MyCalendar {
 public:
-    set<pair<int,int>>st; 
+    vector<pair<int,int>>st; 
     MyCalendar() {
         
     }
@@ -11,7 +11,7 @@ public:
             if (i.second>start&&i.first<end)
                 return false; 
         }
-        st.insert({start , end}); 
+        st.push_back({start , end}); 
         return true ; 
     }
 };
