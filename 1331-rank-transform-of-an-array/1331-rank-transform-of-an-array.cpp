@@ -4,7 +4,7 @@ public:
       set<int>st ; 
       for (auto i : arr)
           st.insert(i); 
-      map<int,int>mp ; 
+      unordered_map<int,int>mp ; 
       int c =1 ; 
       for (auto i: st)
       {
