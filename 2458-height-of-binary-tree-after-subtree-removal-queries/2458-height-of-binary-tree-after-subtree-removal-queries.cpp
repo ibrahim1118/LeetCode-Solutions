@@ -11,12 +11,11 @@
  */
 class Solution {
 public:
-    map<int,int>mp; 
+   vector<int>mp; 
     vector<int> treeQueries(TreeNode* root, vector<int>& qur) {
         vector<int>v(100005); 
-        rec(root , 0 ,1);
-        for (auto i: mp)
-            cout<<i.first<<" "<<i.second<<endl; 
+        mp.resize(100005); 
+        rec(root , 0 ,1); 
         vector<int>ans; 
         queue<TreeNode*>q ; 
         q.push(root); 
