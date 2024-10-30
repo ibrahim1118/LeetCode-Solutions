@@ -21,12 +21,12 @@ public:
                 }
             }
      }
-      for (auto i: dp)
-          cout<<i<<" "; 
-        cout<<endl; 
-      for (auto j: dp2)
-          cout<<j<<" "; 
-        cout<<endl; 
+      // for (auto i: dp)
+      //     cout<<i<<" "; 
+      //   cout<<endl; 
+      // for (auto j: dp2)
+      //     cout<<j<<" "; 
+      //   cout<<endl; 
       int mx =0 ; 
     
       for(int i=0;i<nums.size();i++)
