@@ -17,7 +17,7 @@ public:
             }
              while(x>=k&&l<=i)
                 {
-                    cout<<x<<" "<<l<<" "<<i<<endl; 
+                    //cout<<x<<" "<<l<<" "<<i<<endl; 
                     ans= min(ans,i-l+1);
                     bitset<32> xx=x ; 
                     bitset<32> ll = nums[l] ; 
