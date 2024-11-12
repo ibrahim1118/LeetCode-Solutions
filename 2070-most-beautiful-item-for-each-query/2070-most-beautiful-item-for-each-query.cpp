@@ -1,15 +1,14 @@
 class Solution {
 public:
-    vector<int> maximumBeauty(vector<vector<int>>& items, vector<int>& queries) {
-        vector<pair<int,int>>v; 
-        for (auto i: items)
-            v.push_back({i[0], i[1]});
+    vector<int> maximumBeauty(vector<vector<int>>& v, vector<int>& queries) {
+         
+       
         sort(v.begin(),v.end()); 
-        int mx =v[0].second; 
+        int mx =v[0][1]; 
         for (int i=1;i<v.size();i++)
         {
-            v[i].second= max(mx , v[i].second); 
-            mx =  v[i].second; 
+            v[i][1]= max(mx , v[i][1]); 
+            mx =  v[i][1]; 
         }
         vector<int>ans; 
         for (auto i: queries)
@@ -19,9 +18,9 @@ public:
             while(l<=r)
             {
                 int mid = (l+r)/2; 
-                if (v[mid].first<=i)
+                if (v[mid][0]<=i)
                 {
-                    x = max(x , v[mid].second); 
+                    x = max(x , v[mid][1]); 
                     l = mid+1;
                 }
                 else 
