@@ -20,8 +20,8 @@ public:
                 q.pop(); 
                 if (x.first==n-1)
                 {
-                    a =min(a, x.second); 
-                    //break; 
+                    a = x.second; 
+                    break; 
                 }
                 vis[x.first] =1 ; 
                 for (auto i: adj[x.first])
